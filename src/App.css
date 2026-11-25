@@ -1,0 +1,314 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #121213;
+  color: #ffffff;
+}
+.header {
+  width: 100%;
+  padding: 22px 15px;
+  text-align: center;
+  border-bottom: 1px solid #3a3a3c;
+}
+.logo {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+.header p {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #818384;
+  margin-top: 5px;
+}
+.game-container {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 12px;
+}
+.game-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 0 5px;
+}
+
+.game-info span {
+  font-size: 11px;
+  color: #818384;
+  letter-spacing: 2px;
+}
+
+.game-info strong {
+  font-size: 14px;
+}
+
+/* Game Board */
+
+.game-board {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+}
+
+/* Tiles */
+
+.tile {
+  width: 56px;
+  height: 56px;
+  border: 2px solid #3a3a3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  transition: background 0.25s ease;
+}
+
+.tile.filled {
+  border-color: #565758;
+  animation: pop 0.1s ease;
+}
+
+.tile.current {
+  border-color: #818384;
+}
+
+.tile.correct {
+  background: #538d4e;
+  border-color: #538d4e;
+  color: white;
+}
+
+.tile.present {
+  background: #b59f3b;
+  border-color: #b59f3b;
+  color: white;
+}
+
+.tile.absent {
+  background: #3a3a3c;
+  border-color: #3a3a3c;
+  color: white;
+}
+
+@keyframes pop {
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* Messages */
+
+.message {
+  min-height: 25px;
+  margin: 2px 0 12px;
+  color: #ffcc66;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Keyboard */
+
+.keyboard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.key {
+  height: 52px;
+  min-width: 30px;
+  flex: 1;
+  max-width: 43px;
+  border: none;
+  border-radius: 5px;
+  background: #818384;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.key:hover {
+  filter: brightness(1.15);
+}
+
+.key:active {
+  transform: scale(0.94);
+}
+
+.key:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.key.correct {
+  background: #538d4e;
+}
+
+.key.present {
+  background: #b59f3b;
+}
+
+.key.absent {
+  background: #3a3a3c;
+}
+
+.wide-key {
+  max-width: 65px;
+  font-size: 11px;
+}
+
+/* Instructions */
+
+.instructions {
+  margin-top: 22px;
+  color: #818384;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* Footer */
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+  color: #565758;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Game Over Modal */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 100;
+}
+
+.modal {
+  width: 100%;
+  max-width: 360px;
+  padding: 35px 25px;
+  background: #202124;
+  border: 1px solid #3a3a3c;
+  border-radius: 14px;
+  text-align: center;
+  animation: appear 0.3s ease;
+}
+
+.modal-icon {
+  font-size: 45px;
+  margin-bottom: 12px;
+}
+
+.modal h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  color: #aaaaaa;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.solution {
+  margin: 25px 0;
+  padding: 15px;
+  background: #2b2b2e;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.solution span {
+  color: #818384;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.solution strong {
+  font-size: 28px;
+  letter-spacing: 6px;
+}
+
+.restart-button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 7px;
+  background: #538d4e;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.restart-button:hover {
+  background: #65a75e;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+
+@media (max-width: 400px) {
+  .tile {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  .key {
+    height: 45px;
+    min-width: 24px;
+    font-size: 11px;
+  }
+
+  .wide-key {
+    max-width: 55px;
+    font-size: 9px;
+  }
+}
