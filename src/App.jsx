@@ -139,8 +139,8 @@ function App() {
   return (
     <div className="app">
       <header className="header">
-        <div className="logo">WORDLE</div>
-        <p>GUESS THE FIVE-LETTER WORD</p>
+      <div className="logo">WORD QUEST</div>
+<p>YOUR DAILY WORD CHALLENGE</p>
       </header>
 
       <main className="game-container">
@@ -171,9 +171,9 @@ function App() {
         </p>
       </main>
 
-      <footer>
-        <p>WORDLE CLONE | REACT PROJECT</p>
-      </footer>
+   <footer>
+  <p>WORD QUEST | REACT WORD GAME</p>
+</footer>
 
       <GameOverModal
         gameStatus={gameStatus}

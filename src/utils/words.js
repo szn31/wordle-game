@@ -1,13 +1,13 @@
 
 export const WORDS = [
-  "APPLE", "BRAIN", "CHAIR", "CLOUD", "DREAM",
-  "EARTH", "FLAME", "GRAPE", "HEART", "HOUSE",
-  "JUICE", "LIGHT", "MONEY", "NIGHT", "OCEAN",
-  "PEACE", "PLANT", "QUICK", "RADIO", "SMILE",
-  "STONE", "TRAIN", "WATER", "WORLD", "YOUTH",
-  "BRAVE", "CRANE", "PLANE", "SHARE", "SOUND",
-  "TABLE", "TIGER", "MOUSE", "BEACH", "MUSIC",
-  "GREEN", "BLACK", "WHITE", "SWEET", "HAPPY"
+  "ABOUT", "ABOVE", "ADULT", "AFTER", "AGAIN",
+  "ALARM", "ALBUM", "ANGEL", "ANGER", "APPLE",
+  "BASIC", "BIRTH", "BLEND", "BLOCK", "BOARD",
+  "CANDY", "CARRY", "CATCH", "CAUSE", "CHEST",
+  "CHIEF", "CLEAN", "CLEAR", "CLOCK", "COAST",
+  "COUNT", "COVER", "CYCLE", "DAILY", "DANCE",
+  "DEATH", "DEPTH", "DOUBT", "DOZEN", "DRINK",
+  "ENJOY", "ENTRY", "ERROR", "EVENT", "FAITH"
 ];
 
 export const getRandomWord = () => {
